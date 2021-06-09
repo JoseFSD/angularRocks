@@ -1,9 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+const uploadImageBand = require('../middleware/uploadImageBand');
+const controller = require('../controllers/controller');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+// localhost:3000/
+router.get('/', controller.getBands);
+router.post('/', uploadImageBand, controller.createBand);
+router.put('/:id', controller.updateBand);
+router.delete('/:id', controller.deleteBand);
 
 module.exports = router;
