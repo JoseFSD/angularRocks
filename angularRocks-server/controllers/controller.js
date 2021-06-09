@@ -5,6 +5,7 @@ class IndexController {
 
     getBands(req, res) {
         let sql = `SELECT * FROM music.bands`;
+        // if (err) throw res.status(400).json({err});
         
         connection.query(sql, (err, result) => {
             if (err) throw err;
@@ -21,7 +22,7 @@ class IndexController {
 
         connection.query(sql, (err, result) => {
             if (err) throw err;
-            res.status(200).json(result);
+            res.status(201).json(result);
         });
     };
     
@@ -36,7 +37,7 @@ class IndexController {
         
         connection.query(sql,(err,result)=>{
             if(err)throw err;
-            res.status(200).json(result);
+            res.status(201).json(result);
         })
     }
     
@@ -45,7 +46,7 @@ class IndexController {
         let sql=`DELETE FROM music.bands WHERE band_ID=${id}`;
         connection.query(sql,(err,result)=>{
             if(err)throw err;
-            res.json(result);
+            res.status(200).json(result);
         });
     };
 }

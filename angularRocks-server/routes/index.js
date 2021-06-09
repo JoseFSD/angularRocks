@@ -6,7 +6,7 @@ const controller = require('../controllers/controller');
 // localhost:3000/
 router.get('/', controller.getBands);
 router.post('/', uploadImageBand, controller.createBand);
-router.put('/:id', controller.updateBand);
+router.put('/:id', uploadImageBand, controller.updateBand);
 router.delete('/:id', controller.deleteBand);
 
 module.exports = router;
