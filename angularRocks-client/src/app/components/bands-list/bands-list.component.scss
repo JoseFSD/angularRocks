@@ -1,0 +1,43 @@
+:host {
+    table {
+        width: 100%;
+        tr:nth-child(even) {
+            background-color: rgba(226, 226, 226, 0.555);
+        }
+        .hoverUser {
+            &:hover {
+                cursor: pointer;
+                background-color: rgba(167, 221, 182, 0.918);
+            }
+        }
+    }
+      
+    .mat-form-field {
+        font-size: 14px;
+        width: 100%;
+    }
+      
+    ng-container {
+        width: 100%;
+        td, th {
+            width: 7.7%;
+            padding-left: 3px;
+            padding-right: 3px;
+        }
+        
+        td {
+            text-align: center;
+        }
+    }    
+
+    .excellButton {
+        padding: 0.2rem;
+        margin: 0.5rem 0;
+        background-color: rgb(255, 81, 0);
+        color: white;
+    
+        &:hover {
+            background-color: rgba(255, 113, 47, 0.87);
+        }
+    }
+}

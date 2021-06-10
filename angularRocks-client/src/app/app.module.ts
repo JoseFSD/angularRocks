@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { BandsListComponent } from './components/bands-list/bands-list.component';
 import { DetailsBandsComponent } from './components/bands-list/details-bands/details-bands.component';
 
+// Material angular
+import { MaterialModule } from './material.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -14,7 +18,9 @@ import { DetailsBandsComponent } from './components/bands-list/details-bands/det
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MaterialModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
